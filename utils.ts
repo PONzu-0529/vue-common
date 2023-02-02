@@ -1,3 +1,5 @@
+import { Router } from 'vue-router';
+
 export default class Utils {
   /**
    * Get URL
@@ -18,5 +20,16 @@ export default class Utils {
         return 'http://localhost';
       }
     }
+  }
+
+  /**
+   * Change Page
+   * @param router this.$router
+   * @param name
+   */
+  public static changePage(router: Router, name: string): void {
+    router.push({
+      name: name
+    });
   }
 }
