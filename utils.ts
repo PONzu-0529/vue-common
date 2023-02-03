@@ -1,4 +1,4 @@
-import { Router } from 'vue-router';
+import VueRouter from 'vue-router';
 
 export default class Utils {
   /**
@@ -27,8 +27,8 @@ export default class Utils {
    * @param router this.$router
    * @param name
    */
-  public static changePage(router: Router, name: string): void {
-    router.push({
+  public static async changePage(router: VueRouter, name: string): Promise<void> {
+    await router.push({
       name: name
     });
   }
